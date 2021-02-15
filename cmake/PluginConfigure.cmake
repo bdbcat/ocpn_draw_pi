@@ -226,6 +226,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug" OR CMAKE_BUILD_TYPE STREQUAL "RelWithDebInf
 endif(CMAKE_BUILD_TYPE STREQUAL "Debug" OR CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
 
 if(NOT WIN32 AND NOT APPLE)
+    add_definitions("-DUSE_ANDROID_GLES2")
     add_definitions("-Wall -Wno-unused -fexceptions -rdynamic -fvisibility=hidden")
     add_definitions(" -fno-strict-aliasing")
     message(STATUS "${CMLOC}Build type: ${CMAKE_BUILD_TYPE}")
@@ -580,6 +581,7 @@ if(NOT WIN32 AND NOT APPLE AND NOT QT_ANDROID)
     if(NOT $ENV{BUILD_GTK3} STREQUAL "TRUE")
         find_package(GTK2)
     endif()
+    SET(GTK2_FOUND TRUE)
 
     if(GTK2_FOUND)
         set(wxWidgets_CONFIG_OPTIONS ${wxWidgets_CONFIG_OPTIONS} --toolkit=gtk2)
