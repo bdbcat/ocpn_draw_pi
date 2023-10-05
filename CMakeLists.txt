@@ -347,7 +347,7 @@ include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpninclude)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/extinclude)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/ocpn-api)
-
+include_directories(BEFORE ${PROJECT_SOURCE_DIR}/opencpn-libs/glu/include)
 ## Change target_sources to match your project needs.
 ##==============================================================
 
