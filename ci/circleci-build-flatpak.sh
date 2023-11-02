@@ -46,11 +46,6 @@ if test -f "$EXTRA_LIBS"; then
 fi
 
 git submodule update --init opencpn-libs
-cd opencpn-libs
-git checkout add_oddc_to_pidc
-cd ..
-
-cat .gitmodules
 
 if [ -n "$CI" ]; then
     sudo apt update
@@ -59,8 +54,7 @@ if [ -n "$CI" ]; then
     sudo apt install --reinstall  ca-certificates
 
     # Use updated flatpak workaround
-#    sudo add-apt-repository -y ppa:alexlarsson/flatpak
-    sudo add-apt-repository -y ppa:flatpak/stable
+    sudo add-apt-repository -y ppa:alexlarsson/flatpak
     sudo apt update
 
     # Install flatpak and flatpak-builder - obsoleted by flathub
