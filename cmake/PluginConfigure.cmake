@@ -455,7 +455,7 @@ IF(QT_ANDROID)
     SET(CMAKE_CXX_FLAGS "-pthread -fPIC ")
 
     ## Compiler flags
-    string(APPEND CMAKE_CXX_FLAGS " -Wno-inconsistent-missing-override -Wno-potentially-evaluated-expression"}
+    string(APPEND CMAKE_CXX_FLAGS " -Wno-inconsistent-missing-override -Wno-potentially-evaluated-expression")
     string(APPEND CMAKE_CXX_FLAGS " -Wno-overloaded-virtual -Wno-unused-command-line-argument")
     string(APPEND CMAKE_CXX_FLAGS " -Wno-unknown-pragmas")
 
