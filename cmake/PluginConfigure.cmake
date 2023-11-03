@@ -457,7 +457,7 @@ IF(QT_ANDROID)
     ## Compiler flags
     string(APPEND CMAKE_CXX_FLAGS " -Wno-inconsistent-missing-override -Wno-potentially-evaluated-expression")
     string(APPEND CMAKE_CXX_FLAGS " -Wno-overloaded-virtual -Wno-unused-command-line-argument")
-    string(APPEND CMAKE_CXX_FLAGS " -Wno-unknown-pragmas")
+    string(APPEND CMAKE_CXX_FLAGS " -Wno-unknown-pragmas -Wno-macro-redefined")
 
     message(STATUS "${CMLOC}Adding libgorp.o shared library")
     set(CMAKE_SHARED_LINKER_FLAGS "-Wl,-soname,libgorp.so ")
