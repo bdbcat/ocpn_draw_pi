@@ -478,6 +478,8 @@ IF(QT_ANDROID)
         ADD_DEFINITIONS(-DARMHF)
     endif()
 
+    add_definitions("-fvisibility=default")
+
 ENDIF(QT_ANDROID)
 
 if((NOT OPENGLES_FOUND) AND (NOT QT_ANDROID))
